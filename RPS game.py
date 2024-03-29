@@ -22,17 +22,21 @@ while True:
     if a == 'Q':
         break
     if a not in ["R", "P", "S"]:
+        time.sleep(1)
         print("Invalid input. Please try again.")
         continue
     x = random.choice(bot)
     print("Your choice:", a, "Computer's choice:", x)
     
     if a == x:
+        time.sleep(2)
         print("It's a tie!")
     elif (a == "R" and x == "S") or (a == "P" and x == "R") or (a == "S" and x == "P"):
+        time.sleep(2)
         print("You win!🍬")
         win += 1
     else:
+        time.sleep(2)
         print("Computer wins!🤖")
     
     print("Your score:", win)
